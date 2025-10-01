@@ -17,10 +17,10 @@ export class ResumeComponent implements OnInit {
 
   ngOnInit(): void {
     this.seoService.updateMetaTags({
-      title: 'Resume – Darshan Bhuva',
-      description: 'Download or view Darshan Bhuva\'s professional resume. Comprehensive overview of skills, experience, and achievements as a Full-Stack Developer specializing in Angular and .NET.',
+      title: 'Resume – Gaurav Nishad',
+      description: 'Download or view Gaurav Nishad\'s professional resume. Comprehensive overview of skills, experience, and achievements as a Full-Stack Developer specializing in Angular and .NET.',
       url: 'https://darshanbhuva.vercel.app/resume',
-      keywords: 'Darshan Bhuva Resume, Full-Stack Developer CV, Angular Developer Resume, .NET Developer CV, Web Developer Resume Download'
+      keywords: 'Gaurav Nishad Resume, Full-Stack Developer CV, Angular Developer Resume, .NET Developer CV, Web Developer Resume Download'
     });
   }
 }

@@ -1,26 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { AboutMeComponent } from '../../components/about-me/about-me.component';
+import { Component, OnInit } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { AboutMeComponent } from "../../components/about-me/about-me.component";
 
-import { SeoService } from '../../service/seo.service';
+import { SeoService } from "../../service/seo.service";
 
 @Component({
-  selector: 'app-about-page',
+  selector: "app-about-page",
   standalone: true,
   imports: [CommonModule, AboutMeComponent],
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  templateUrl: "./about.component.html",
+  styleUrls: ["./about.component.css"],
 })
 export class AboutComponent implements OnInit {
-
   constructor(private seoService: SeoService) {}
 
   ngOnInit(): void {
     this.seoService.updateMetaTags({
-      title: 'About Me – Darshan Bhuva',
-      description: 'Learn about Darshan Bhuva, a passionate Full-Stack Developer with expertise in Angular, .NET, and modern web technologies. Discover my journey, skills, and professional background.',
-      url: 'https://darshanbhuva.vercel.app/about',
-      keywords: 'About Darshan Bhuva, Full-Stack Developer Background, Angular Developer Profile, .NET Developer Experience, Web Developer Skills'
+      title: "About Me – Gaurav Nishad",
+      description:
+        "Learn about Gaurav Nishad, a passionate Full-Stack Developer with expertise in Angular, .NET, and modern web technologies. Discover my journey, skills, and professional background.",
+      url: "https://darshanbhuva.vercel.app/about",
+      keywords:
+        "About Gaurav Nishad, Full-Stack Developer Background, Angular Developer Profile, .NET Developer Experience, Web Developer Skills",
     });
   }
 }

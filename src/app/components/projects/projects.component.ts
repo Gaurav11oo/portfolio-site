@@ -1,54 +1,51 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule } from "@angular/common";
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-projects',
+  selector: "app-projects",
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './projects.component.html'
+  templateUrl: "./projects.component.html",
 })
 export class ProjectsComponent {
   projects = [
     {
-      title: 'Media Management Platform',
+      title: "Flipkart Clone",
       description: [
-        'This project aimed to tackle the complexities of media planning across diverse channels, where challenges such as errors and compliance issues frequently arise. These hurdles often result in time-consuming tasks and potential regulatory risks, diverting attention away from strategic thinking and creative endeavours.',
-        'Our objective was to streamline the media planning process, minimizing errors and ensuring compliance, allowing teams to focus on strategic decision-making and creativity.'
+        "Implemented user authentication, product listing, cart functionality, and order management with secure APIs and role-based access.",
+        "Integrated payment gateway (Razorpay/Stripe) and real-time product filtering, search, and sorting features for a smooth user experience.",
+        "Designed a responsive UI using React, Redux Toolkit, Material UI and Tailwind CSS, ensuring seamless interaction across devices.",
       ],
-      techStack: ['Angular', '.NET Framework', 'SQL Server', 'Microsoft IIS', 'Firebase', 'CI/CD'],
-      image: '/assets/media-management-platform.webp',
-      aosImage: 'fade-right'
+      techStack: ["React", "Express.js", "Node.js", "MongoDB", "Payment Gateway", "Material UI", "Tailwind CSS"],
+      image: "/assets/flipkart-clone.png",
+      url: "https://flipkartmernsite.vercel.app/",
+      aosImage: "fade-right",
     },
     {
-      title: 'Smile Analysis Web Application',
+      title: "Job Portal",
       description: [
-        'Developed and deployed a smile detection application for elderly residents in Japanese old age homes using computer vision and machine learning algorithms.',
-        'Designed and implemented a user-friendly interface using Angular with Flask backend to analyze smiles in real-time.'
+        "Job Portal built for using to connect job seekers and employers with a seamless hiring process.",
+        "Designed a scalable architecture with secure authentication, RESTful APIs, and role-based access control.",
+        "Implemented real-time job search, advanced filtering, resume uploads, application tracking, and email notifications.",
+        "Developed an interactive dashboard for job seekers and recruiters to manage applications, job postings, and user profiles efficiently.",
       ],
-      techStack: ['Angular', 'Python', 'SQL Server', 'AWS'],
-      image: '/assets/smile-project.webp',
-      aosImage: 'fade-left'
+      techStack: ["React", "Express.js", "Node.js", "MongoDB", "Tailwind CSS"],
+      image: "/assets/Job-portal.png",
+      url: "https://jobportal2025.netlify.app/", // 🔗 Add your actual live link here
+      aosImage: "fade-left",
     },
     {
-      title: 'AI Receptionist',
+      title: "Blood Bank Management System",
       description: [
-        'The project involves the implementation of a receptionist system for tourists and hotel guests, utilizing a multilingual AI avatar.',
-        'The system provides assistance and information to guests in multiple languages, enhancing their overall experience while streamlining hotel operations.'
+        "Developed a Blood Bank Management System using MERN Stack to streamline blood donation, inventory management, and request processing.",
+        "Designed a secure and scalable system with JWT authentication, RESTful APIs, and role-based access control for donors, recipients, and administrators.",
+        "Implemented real-time blood availability tracking, donor registration, request handling, and notification system for seamless operations.",
+        "Built an interactive dashboard to monitor blood stock levels, manage donation history, and facilitate efficient communication between users.",
       ],
-      techStack: ['Node.js', 'Python', 'OpenAI API', 'Nginx'],
-      image: '/assets/ai-receptionist.webp',
-      aosImage: 'fade-right'
+      techStack: ["React", "Express.js", "Node.js", "MongoDB", "Boot Strap", "HTML", "CSS"],
+      image: "/assets/bank1.png",
+      url: "https://mernblood01.netlify.app/", // 🔗 Add your actual live link here
+      aosImage: "fade-right",
     },
-    {
-      title: 'DocuQuery AI',
-      description: [
-        'Developed an AI-powered document query system allowing users to upload PDFs and ask questions based on the document content.',
-        'Designed and integrated an Angular-based frontend with a Flask backend for seamless document processing.',
-        'Implemented role-based access control, ensuring only authorized users can manage documents.'
-      ],
-      techStack: ['Angular', 'Tailwind CSS', 'Flask (Python)', 'MongoDB', 'AWS'],
-      image: '/assets/docu-query-ai.webp',
-      aosImage: 'fade-left'
-    }
   ];
 }

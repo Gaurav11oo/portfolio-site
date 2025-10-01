@@ -1,10 +1,8 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-experience',
+  selector: "app-experience",
   standalone: true,
-  templateUrl: './experience.component.html'
+  templateUrl: "./experience.component.html",
 })
-export class ExperienceComponent {
-}
-
+export class ExperienceComponent {}
