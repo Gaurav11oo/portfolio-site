@@ -6,7 +6,7 @@ Disallow: /dist/
 
 
 # Sitemap location
-Sitemap: https://darshanbhuva.vercel.app/sitemap.xml
+Sitemap: https://gauravnishad.vercel.app/sitemap.xml
 
 # Additional sitemaps
-Sitemap: https://darshanbhuva.vercel.app/sitemap.xml
+Sitemap: https://gauravnishad.vercel.app/sitemap.xml
