@@ -46,7 +46,7 @@ Check out the site: [https://gauravnishad.vercel.app](https://gauravnishad.verce
 
 For questions or feedback, feel free to reach out:
 - **Email**: [Nishadgaurav2017@gmail.com](mailto:Nishadgaurav2017@gmail.com)
-- **LinkedIn**: [Gaurav Nishad]([https://www.linkedin.com/in/gaurav-nishad-6682b1198](https://www.linkedin.com/in/gaurav-nishad-6682b1198))
+- **LinkedIn**: [Gaurav Nishad](https://www.linkedin.com/in/gaurav-nishad-6682b1198)
 - **GitHub**: [Gaurav11oo](https://github.com/gaurav11oo)
 
 ---
