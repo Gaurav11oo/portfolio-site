@@ -1,0 +1,176 @@
+.timeline-wrapper {
+    position: relative;
+    scroll-margin-top: 96px;
+}
+
+/* If your nav bar height differs, adjust the 96px above (and the
+   80px below) to match it. */
+@media (max-width: 768px) {
+    #education {
+        scroll-margin-top: 80px;
+    }
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom,
+            transparent,
+            #64efff,
+            #64ffda,
+            transparent);
+    transform: translateX(-50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.timeline-node {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 20;
+}
+
+.timeline-node>div {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #112240;
+    border: 3px solid #64f5ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(100, 255, 218, .25);
+    transition: .3s;
+}
+
+.timeline-node>div:hover {
+    transform: scale(1.1);
+}
+
+.timeline-card-left,
+.timeline-card-right {
+    position: relative;
+}
+
+.timeline-card-left::after {
+    content: "";
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    width: 40px;
+    height: 2px;
+    background: #64ffda;
+    opacity: .45;
+}
+
+.timeline-card-right::before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    width: 40px;
+    height: 2px;
+    background: #64ffda;
+    opacity: .45;
+}
+
+.timeline-card {
+    background: rgba(17, 34, 64, .45);
+    border-radius: 18px;
+    border: 1px solid rgba(136, 146, 176, .15);
+    transition: .35s;
+}
+
+.timeline-card:hover {
+    transform: translateY(-8px);
+    border-color: #64e8ff;
+    box-shadow: 0 15px 35px rgba(100, 255, 218, .12);
+}
+
+/* ============================================================ */
+/* RESPONSIVE — tablet and below                                */
+/* Desktop uses a 3-column grid (card / node / card) alternating */
+/* sides. That layout has no room to breathe under ~768px, so we */
+/* collapse it to a single left-aligned timeline: a slim node    */
+/* column on the left, full-width cards on the right.            */
+/* ============================================================ */
+@media (max-width: 768px) {
+    .timeline-row {
+        grid-template-columns: 44px 1fr !important;
+        align-items: flex-start !important;
+        column-gap: 16px;
+    }
+
+    /* Spacer divs only existed to balance the 3rd grid column on
+       desktop; with 2 columns now they're not needed. */
+    .timeline-spacer {
+        display: none;
+    }
+
+    /* Force node into column 1 and card into column 2 regardless
+       of which side (left/right) they were written for on desktop. */
+    .timeline-node {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .timeline-card-left,
+    .timeline-card-right {
+        grid-column: 2;
+        grid-row: 1;
+        padding: 0 !important;
+    }
+
+    /* The horizontal connector stubs only make sense next to a
+       centered line; hide them in the stacked mobile layout. */
+    .timeline-card-left::after,
+    .timeline-card-right::before {
+        display: none;
+    }
+
+    /* Move the vertical line to sit behind the (smaller) node
+       column instead of the page center. */
+    .timeline-line {
+        left: 22px;
+        transform: none;
+    }
+
+    .timeline-node>div {
+        width: 44px;
+        height: 44px;
+    }
+
+    .timeline-card {
+        padding: 1.25rem !important;
+    }
+
+    .timeline-card h3 {
+        font-size: 1.15rem !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .timeline-row {
+        grid-template-columns: 36px 1fr !important;
+        column-gap: 12px;
+    }
+
+    .timeline-line {
+        left: 18px;
+    }
+
+    .timeline-node>div {
+        width: 36px;
+        height: 36px;
+    }
+
+    .timeline-node svg {
+        width: 16px;
+        height: 16px;
+    }
+}
